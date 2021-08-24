@@ -1,11 +1,15 @@
-import './App.css';
+// import "./App.css";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import "assets/scss/style.scss"
+import "assets/scss/style.scss";
+import LandingPage from "pages/LandingPage";
 
 function App() {
   return (
     <div className="App">
-      Hello World!
+      <Router>
+        <Route path="/" component={LandingPage}></Route>
+      </Router>
     </div>
   );
 }
