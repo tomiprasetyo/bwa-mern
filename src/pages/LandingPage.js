@@ -8,11 +8,17 @@ import Categories from "parts/Categories";
 import landingPage from "json/landingPage.json";
 import Testimony from "parts/Testimony";
 import Footer from "parts/Footer";
+import Example from "./Example";
 
 export default class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.refMostPicked = React.createRef();
+  }
+
+  componentDidMount() {
+    window.title = "Staycation | Home";
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -27,6 +33,7 @@ export default class LandingPage extends Component {
         <Categories data={landingPage.categories} />
         <Testimony data={landingPage.testimonial} />
         <Footer />
+        <Example />
       </>
     );
   }

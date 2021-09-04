@@ -4,6 +4,8 @@ import Button from "elements/Button";
 
 export default function Categories({ data }) {
   return data.map((category, index1) => {
+    // if (category.itemId.length === 0) return null;
+
     return (
       <section className="container" key={`category-${index1}`}>
         <Fade bottom>
